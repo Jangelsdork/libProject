@@ -14,7 +14,8 @@ Bookshelf.prototype.readOut = function() {
 }
 
 function addBook() {
-    //write function that takes a user's input and stores it in an array 
+    let myLibrary = []
+    return myLibrary
     
 }
 
