@@ -18,6 +18,10 @@ function addBook() {
     
 }
 
+let bookTitle = document.getElementsByName("title")[0].value;
+
+console.log(bookTitle)
+
 
 
 
