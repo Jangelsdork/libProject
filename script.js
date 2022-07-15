@@ -19,9 +19,20 @@ function addBook() {
     
 }
 
-let bookTitle = document.getElementsByName("title")[0].value;
+document.getElementById("submitButton").addEventListener("click", function() {
+    let bookTitle = document.getElementsByName("title")[0].value;
+    let authorName = document.getElementsByName("author")[0].value;
+    let numOfPages = document.getElementsByName("pages")[0].value;
+    let hasRead = document.getElementById("read")[0].value;
+    console.log(bookTitle, authorName, numOfPages, hasRead)
+}) 
 
-console.log(bookTitle)
+
+
+// let bookTitle = document.getElementsByName("title")[0].value;
+
+
+
 
 
 
