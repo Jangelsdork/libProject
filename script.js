@@ -1,6 +1,6 @@
 console.log("hello")
 
-let myLibrary = [];
+let myLibrary = []; //store objects as variables, and store only the variables in this array 
 
 function Bookshelf(title, author, pageCount, readStatus) {
     this.title = title
@@ -14,19 +14,23 @@ Bookshelf.prototype.readOut = function() {
 }
 
 function addBook() {
-    let myLibrary = []
-    return myLibrary
+
     
-}
+ }
 
 document.getElementById("submitButton").addEventListener("click", function() {
+        readForm();
+}) 
+
+function readForm() {
     let bookTitle = document.getElementsByName("title")[0].value;
     let authorName = document.getElementsByName("author")[0].value;
     let numOfPages = document.getElementsByName("pages")[0].value;
-    let hasRead = document.getElementById("read")[0].value;
-    console.log(bookTitle, authorName, numOfPages, hasRead)
-}) 
-
+    let hasRead = document.getElementsByName("read")[0].value;
+    newBook = new Bookshelf(bookTitle, authorName, numOfPages, hasRead);
+    myLibrary.push(newBook);
+    console.log(myLibrary)
+}
 
 
 // let bookTitle = document.getElementsByName("title")[0].value;
