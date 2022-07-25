@@ -19,7 +19,7 @@ function addBook() {
  }
 
 document.getElementById("submitButton").addEventListener("click", function() {
-        readForm();
+        readForm(), writeForm();
 }) 
 
 function readForm() {
@@ -29,7 +29,17 @@ function readForm() {
     let hasRead = document.getElementsByName("read")[0].value;
     newBook = new Bookshelf(bookTitle, authorName, numOfPages, hasRead);
     myLibrary.push(newBook);
-    console.log(myLibrary)
+    
+}
+
+function writeForm() {
+    let newBookDiv = document.createElement("div");
+    let newBookContent = document.createTextNode("test");
+    newBookDiv.appendChild(newBookContent);
+    const parentDiv = document.getElementById("tableContainer")
+    const currentDiv = document.getElementById("table")
+    parentDiv.insertBefore(newBookDiv, currentDiv);
+    console.log(myLibrary);
 }
 
 
