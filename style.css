@@ -2,7 +2,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 9fr;
+    grid-template-columns: 3fr 8fr;
 }
 
 form {
@@ -11,7 +11,7 @@ form {
 }
 
 table {
-    width: 80vw;
+    width: 70vw;
     margin: 40px;
 }
 
