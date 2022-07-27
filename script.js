@@ -19,7 +19,7 @@ function addBook() {
  }
 
 document.getElementById("submitButton").addEventListener("click", function() {
-       readForm() ,writeForm();
+       readForm() ,writeFormTitle();
 }) 
 
 function readForm() {
@@ -33,15 +33,27 @@ function readForm() {
     
 }
 
-function writeForm() {
-    let newBookDiv = document.createElement("td");
-    let latestBook = Bookshelf[0];
-    console.log(myLibrary[myLibrary.length-1])
-    let newBookContent = document.createTextNode(`${myLibrary[myLibrary.length-1].title}`);
-    newBookDiv.appendChild(newBookContent);
-    const parentDiv = document.getElementById("tableContainer")
-    const currentDiv = document.getElementById("table")
-    parentDiv.insertBefore(newBookDiv, currentDiv);
+function writeFormTitle() {
+    const parentDiv = document.getElementById("table")
+    let newRow = document.createElement("tr")
+    newRow.classList.add("newRow")
+    parentDiv.appendChild(newRow);
+    let newBookTitle = document.createElement("td");
+    let newBookAuthor = document.createElement("td");
+    let newBookPages = document.createElement("td");
+    let newBookRead = document.createElement("td");
+    let newBookContentTitle= document.createTextNode(`${myLibrary[myLibrary.length-1].title}`);
+    let newBookContentAuthor= document.createTextNode(`${myLibrary[myLibrary.length-1].author}`);
+    let newBookContentPages= document.createTextNode(`${myLibrary[myLibrary.length-1].pageCount}`);
+    let newBookContentRead= document.createTextNode(`${myLibrary[myLibrary.length-1].readStatus}`);
+    newBookTitle.appendChild(newBookContentTitle);
+    newBookAuthor.appendChild(newBookContentAuthor);
+    newBookPages.appendChild(newBookContentPages);
+    newBookRead.appendChild(newBookContentRead);
+    newRow.appendChild(newBookTitle);
+    newRow.appendChild(newBookAuthor);
+    newRow.appendChild(newBookPages);
+    newRow.appendChild(newBookRead);
 }
 
 
