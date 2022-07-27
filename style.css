@@ -10,6 +10,11 @@ form {
     flex-direction: column;
 }
 
+table {
+    width: 80vw;
+    margin: 40px;
+}
+
 /* minimal table styling  */
 
 html {
